@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d3d3d3, #001f3f);
+  background-repeat: no-repeat; /* Just in case */
+  background-attachment: fixed;
+}
+
+.container {
+  text-align: center;
+}
+
+.header {
+  padding: 20px 0;
+}
+
+.header-image {
+  background-image: url('../images/icenter.png'); /* Replace with your image */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+}
+
+.header-image h1 {
+  margin: 0;
+  line-height: 0.9;
+    font-size: 3.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background: #00000055;
+}
+
+.content-box {
+  background-color: rgb(229, 229, 229);
+  margin: auto;
+  width: 90%;
+  max-width: 700px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px black;
+  min-height: 200px;
+}
+th{
+  background-color: #001f3f;
+  color: white;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+td {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 10px;
+  text-align: left;
+}
+
+label {display: block;}
+
+label{
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #001f3f;
+  text-shadow: black 1px 1px 2px;
+  width: 50%;
+  margin: auto;
+  
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

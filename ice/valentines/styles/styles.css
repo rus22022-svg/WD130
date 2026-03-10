@@ -1,0 +1,85 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightpink;
+    font-family: Georgia, serif;
+    min-height: 100vh;
+}
+
+/* ===== Navigation / List ===== */
+ul {
+    background-color: red;
+    list-style: none;
+    text-align: center;
+    padding: 5px 0;
+}
+
+li {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px; /* added horizontal padding */
+    display: inline-block;
+}
+
+/* ===== Headings ===== */
+h1 {
+    color: red;
+    font-size: 50px;
+    text-align: center;   /* replaces broken inline-flex centering */
+    display: block;
+    padding: 20px 0;      /* fixed: padding: auto doesn't work */
+    width: 100%;
+}
+
+h2 {
+    color: red;
+    font-size: 30px;
+    display: block;       /* block is more predictable than inline-flex */
+    margin-bottom: 10px;
+}
+
+/* ===== Main Content ===== */
+main {
+    display: flex;        /* added: required for justify-content to work */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 50px;
+    background-color: rgb(255, 155, 155);
+    padding: 20px;        /* added: breathing room inside main */
+    border-radius: 12px;  /* optional: softer look */
+}
+
+/* ===== Paragraph ===== */
+p {
+    font-size: 20px;
+    padding: 10px;
+    display: block;       /* inline-block on p is usually unnecessary */
+    line-height: 1.6;     /* added: improves readability */
+}
+
+/* ===== Images ===== */
+img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;   /* 50% is the correct way to make a circle */
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    display: block;       /* fixed: was inline-block, won't stretch full width */
+    text-align: center;   /* added: centers the text */
+    width: 100%;
+    margin-top: 50px;
+}

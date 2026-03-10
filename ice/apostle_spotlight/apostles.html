@@ -1,0 +1,45 @@
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    background: #f0f0f0;
+  }
+
+  #apostles {
+    position: relative;
+    margin: auto;
+    width: 800px;
+    height: 800px;
+    background-image: url(images/christus.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    border: 3px solid #000;
+  }
+
+  .circleH {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Position portraits around the perimeter */
+  .circleH:nth-child(1) {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .circleH:nth-child(2) {
+    top: 150px;
+    left: 50px;
+  }
+  .circleH:nth-child(3) {
+    top: 150px;
+    right: 50px;
+  }
+  /* Add more positioning for remaining portraits */
+</style>
