@@ -1,45 +1,249 @@
-<style>
-  body {
-    margin: 0;
-    padding: 20px;
-    background: #f0f0f0;
-  }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apostles Spotlight</title>
+    <style>
+      /* ── Reset ─────────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  #apostles {
-    position: relative;
-    margin: auto;
-    width: 800px;
-    height: 800px;
-    background-image: url(images/christus.webp);
-    background-size: cover;
-    background-position: center;
-    border-radius: 25px;
-    border: 3px solid #000;
-  }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0a1a3a;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+      }
 
-  .circleH {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    border: 6px solid #ffffff;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
+      /* ── Outer card ── */
+      .spotlight-card {
+        position: relative;
+        width: 780px;
+        min-height: 520px;
+        border-radius: 22px;
+        overflow: hidden;
+        border: 2px solid #4a6fa5;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+      }
 
-  /* Position portraits around the perimeter */
-  .circleH:nth-child(1) {
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .circleH:nth-child(2) {
-    top: 150px;
-    left: 50px;
-  }
-  .circleH:nth-child(3) {
-    top: 150px;
-    right: 50px;
-  }
-  /* Add more positioning for remaining portraits */
-</style>
+      /* ── Background image ── */
+      .bg {
+        position: absolute;
+        inset: 0;
+        background: url("images/christus.webp") center center / cover no-repeat;
+        filter: brightness(0.75) saturate(1.2);
+        z-index: 0;
+      }
+
+      .bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(5, 25, 70, 0.45) 0%,
+          rgba(10, 40, 100, 0.35) 100%
+        );
+      }
+
+      /* ── Content ── */
+      .content {
+        position: relative;
+        z-index: 1;
+        padding: 28px 30px 32px;
+      }
+
+      /* ── Section titles ── */
+      .section-title {
+        text-align: center;
+        color: #ffffff;
+        font-size: 1.35rem;
+        font-weight: bold;
+        margin-bottom: 16px;
+        text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.7);
+        letter-spacing: 0.02em;
+      }
+
+      /* ── Circle rows ── */
+      .row {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 10px;
+      }
+
+      /* ── Individual apostle circle ── */
+      .apostle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        cursor: default;
+      }
+
+      .apostle img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center;
+        border: 3px solid #ffffff;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      /* ── Hover: outline color changes ── */
+      .apostle:hover img {
+        border-color: #f0c040;
+        box-shadow:
+          0 0 0 3px #f0c04066,
+          0 4px 20px rgba(0, 0, 0, 0.6);
+        transform: scale(1.07);
+      }
+
+      .apostle-name {
+        color: #ffffff;
+        font-size: 0.68rem;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        max-width: 105px;
+        line-height: 1.25;
+        opacity: 0;
+        transform: translateY(4px);
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      /* Name fades in on hover */
+      .apostle:hover .apostle-name {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── Quorum section ── */
+      .quorum-section {
+        margin-top: 14px;
+      }
+
+      .quorum-section .row {
+        margin-bottom: 14px;
+      }
+
+      .quorum-section .apostle img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .quorum-section .apostle-name {
+        max-width: 95px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spotlight-card">
+      <div class="bg"></div>
+
+      <div class="content">
+        <!-- First Presidency -->
+        <p class="section-title">First Presidency</p>
+
+        <div class="row">
+          <div class="apostle">
+            <img src="images/oaks.webp" alt="Dallin H. Oaks" />
+            <span class="apostle-name">Dallin H. Oaks</span>
+          </div>
+          <div class="apostle">
+            <img src="images/eyring.webp" alt="Henry B. Eyring" />
+            <span class="apostle-name">Henry B. Eyring</span>
+          </div>
+          <div class="apostle">
+            <img src="images/holland.webp" alt="Jeffrey R. Holland" />
+            <span class="apostle-name">Jeffrey R. Holland</span>
+          </div>
+        </div>
+
+        <!-- Quorum of the Twelve -->
+        <div class="quorum-section">
+          <p class="section-title">Quorum of the Twelve Apostles</p>
+
+          <!-- Row 1 -->
+          <div class="row">
+            <div class="apostle">
+              <img src="images/uchtdorf.webp" alt="Dieter F. Uchtdorf" />
+              <span class="apostle-name">Dieter F. Uchtdorf</span>
+            </div>
+            <div class="apostle">
+              <img src="images/bednar.webp" alt="David A. Bednar" />
+              <span class="apostle-name">David A. Bednar</span>
+            </div>
+            <div class="apostle">
+              <img src="images/cook.webp" alt="Quentin L. Cook" />
+              <span class="apostle-name">Quentin L. Cook</span>
+            </div>
+            <div class="apostle">
+              <img
+                src="images/christofferson.webp"
+                alt="D. Todd Christofferson"
+              />
+              <span class="apostle-name">D. Todd Christofferson</span>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="row">
+            <div class="apostle">
+              <img src="images/anderson.webp" alt="Neil L. Andersen" />
+              <span class="apostle-name">Neil L. Andersen</span>
+            </div>
+            <div class="apostle">
+              <img src="images/rasband.webp" alt="Ronald A. Rasband" />
+              <span class="apostle-name">Ronald A. Rasband</span>
+            </div>
+            <div class="apostle">
+              <img src="images/stevenson.webp" alt="Gary E. Stevenson" />
+              <span class="apostle-name">Gary E. Stevenson</span>
+            </div>
+            <div class="apostle">
+              <img src="images/renlund.webp" alt="Dale G. Renlund" />
+              <span class="apostle-name">Dale G. Renlund</span>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="row">
+            <div class="apostle">
+              <img src="images/gong.webp" alt="Gerrit W. Gong" />
+              <span class="apostle-name">Gerrit W. Gong</span>
+            </div>
+            <div class="apostle">
+              <img src="images/soares.webp" alt="Ulisses Soares" />
+              <span class="apostle-name">Ulisses Soares</span>
+            </div>
+            <div class="apostle">
+              <img src="images/kearon.webp" alt="Patrick Kearon" />
+              <span class="apostle-name">Patrick Kearon</span>
+            </div>
+            <div class="apostle">
+              <img src="images/causse.webp" alt="Gérald Caussé" />
+              <span class="apostle-name">Gérald Caussé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

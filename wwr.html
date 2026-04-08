@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WWR | WDD 130</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <img src="images/KR-LOGO.png" class="logo-mark" alt="Kalob Rust logo" />
+      <div class="logo-text">
+        <span class="logo-name">Kalob Rust</span>
+        <span class="logo-sub">WDD 130 Portfolio</span>
+      </div>
+    </div>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wwr.html" class="active">WWR</a></li>
+        <li><a href="ice.html">ICE</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="grid-template-columns:1fr; text-align:center; padding-bottom:3rem;">
+      <div>
+        <p class="hero-label">Project 02 — Whitewater Rafting</p>
+        <h1>Dry Oar <em>Boating</em></h1>
+        <p class="hero-sub" style="margin:1rem auto 2rem; max-width:540px;">A full multi-page website for a whitewater rafting company — built with CSS Grid, custom typography, and an 80s synthwave design theme.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="wwr/index.html" class="btn">View Live Site &rarr;</a>
+          <a href="wwr/site-plan-rafting.html" class="btn" style="background:var(--color-accent2);">View Site Plan &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" style="padding-top:3rem;">
+      <div class="section-header">
+        <h2>About This Project</h2>
+        <p>What I built and what I learned.</p>
+      </div>
+      <div class="project-grid" style="max-width:900px;">
+        <article class="project-card">
+          <div class="project-num">01</div>
+          <h3>Site Plan</h3>
+          <p>Designed the color palette, typography, logo, site map, and wireframes before writing a single line of code.</p>
+          <a href="wwr/site-plan-rafting.html" class="card-link">View Site Plan &rarr;</a>
+        </article>
+        <article class="project-card featured">
+          <div class="project-num">02</div>
+          <h3>Home Page</h3>
+          <p>Built a full hero section, three-column card grid, and footer with social links using CSS Grid and custom variables.</p>
+          <a href="wwr/index.html" class="card-link">View Home Page &rarr;</a>
+        </article>
+        <article class="project-card">
+          <div class="project-num">03</div>
+          <h3>Design Theme</h3>
+          <p>Chose an 80s synthwave aesthetic with neon colors, Orbitron headings, and glowing box shadows throughout.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      <img src="images/KR-LOGO.png" class="logo-mark small" alt="Kalob Rust logo" />
+      <p>&copy; 2025 Kalob Rust &mdash; WDD 130, BYU-Idaho</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="wwr.html">WWR</a>
+      <a href="ice.html">ICE</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Portfolio | WDD 130</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="logo-wrap">
+        <img src="images/KR-LOGO.png" class="logo-mark" alt="Kalob Rust logo" />
+        <div class="logo-text">
+          <span class="logo-name">Kalob Rust</span>
+          <span class="logo-sub">WDD 130 Portfolio</span>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="wwr.html">WWR</a></li>
+          <li><a href="ice.html">ICE</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <p class="hero-label">Web Fundamentals &mdash; WDD 130</p>
+          <h1>Learning the <em>craft</em> of the web, one page at a time.</h1>
+          <p class="hero-sub">
+            A collection of projects, experiments, and ideas built while
+            studying web design and development at BYU-Idaho.
+          </p>
+          <a href="about.html" class="btn">Meet the Author &rarr;</a>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <span class="card-label">Current Focus</span>
+            <h2>HTML &amp; CSS Fundamentals</h2>
+            <p>
+              Building semantic structure, responsive layouts, and visual design
+              systems from scratch.
+            </p>
+            <ul class="skill-list">
+              <li>Semantic HTML5</li>
+              <li>CSS Grid &amp; Flexbox</li>
+              <li>Typography &amp; Color</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="projects">
+        <div class="section-header">
+          <h2>Project Work</h2>
+          <p>Assignments and challenges completed throughout the course.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-num">01</div>
+            <h3>Portal Page</h3>
+            <p>
+              Designed and built this very page — a personal portfolio hub with
+              wireframes, color planning, and semantic HTML/CSS.
+            </p>
+            <a href="index.html" class="card-link">View Page &rarr;</a>
+          </article>
+
+          <article class="project-card featured">
+            <div class="project-num">02</div>
+            <h3>WWR Page</h3>
+            <p>
+              A multi-section informational website practicing layout with CSS
+              Grid and content hierarchy.
+            </p>
+            <a href="wwr.html" class="card-link">View Page &rarr;</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-num">03</div>
+            <h3>ICE Challenges</h3>
+            <p>
+              A log of all in-class exercises, each one targeting a specific
+              HTML or CSS skill.
+            </p>
+            <a href="ice.html" class="card-link">View Page &rarr;</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <img
+          src="images/KR-LOGO.png"
+          class="logo-mark small"
+          alt="Kalob Rust logo"
+        />
+        <p>&copy; 2025 Kalob Rust &mdash; WDD 130, BYU-Idaho</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="wwr.html">WWR</a>
+        <a href="ice.html">ICE</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </footer>
+  </body>
+</html>

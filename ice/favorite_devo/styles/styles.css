@@ -69,7 +69,7 @@ label{
   text-shadow: black 1px 1px 2px;
   width: 50%;
   margin: auto;
-  
+  padding: 10px;
 }
 
 input[type=text], select {

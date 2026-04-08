@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Document | WDD 130 Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #faf7f2;
+      --surface: #f0ebe0;
+      --dark: #1c1a17;
+      --mid: #5a5549;
+      --accent: #c4603a;
+      --green: #4a7c6f;
+      --light: #e8e0d0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 0.5rem; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent); }
+    h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--mid); text-transform: uppercase; letter-spacing: 0.08em; }
+    p { color: var(--mid); line-height: 1.6; }
+
+    .doc-header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .doc-header p { margin-top: 0.5rem; }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    /* COLOR PALETTE */
+    .color-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .color-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .chip-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .chip-label {
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+    }
+
+    .chip-hex {
+      font-size: 0.7rem;
+      color: var(--mid);
+      font-family: monospace;
+    }
+
+    /* FONTS */
+    .font-demo {
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .font-demo + .font-demo {
+      margin-top: 0.75rem;
+    }
+
+    .font-demo .sample {
+      font-size: 1.8rem;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    /* WIREFRAME */
+    .wireframe {
+      background: white;
+      border: 2px solid var(--light);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .wf-block {
+      border: 2px dashed var(--light);
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--mid);
+      background: var(--cream);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .wf-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .wf-block.dark {
+      background: var(--dark);
+      color: white;
+      border-color: var(--dark);
+    }
+
+    .wf-block.accent {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .wf-block.tall {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ELEMENTS LIST */
+    .element-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .el-item {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .el-item code {
+      font-size: 0.85rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .el-item small {
+      color: var(--mid);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="doc-header">
+    <h1>Design Document</h1>
+    <p>WDD 130 — Portal Page &nbsp;|&nbsp; Kalob Rust &nbsp;|&nbsp; 2025</p>
+  </div>
+
+  <!-- COLOR SCHEME -->
+  <section class="section">
+    <h2>Color Scheme</h2>
+    <p>An editorial palette inspired by warm paper, charcoal ink, and a terracotta accent. Five core colors.</p>
+
+    <div class="color-row">
+      <div class="color-chip">
+        <div class="chip-swatch" style="background:#faf7f2;"></div>
+        <span class="chip-label">Background</span>
+        <span class="chip-hex">#faf7f2</span>
+      </div>
+      <div class="color-chip">
+        <div class="chip-swatch" style="background:#f0ebe0;"></div>
+        <span class="chip-label">Surface</span>
+        <span class="chip-hex">#f0ebe0</span>
+      </div>
+      <div class="color-chip">
+        <div class="chip-swatch" style="background:#1c1a17;"></div>
+        <span class="chip-label">Dark / Text</span>
+        <span class="chip-hex">#1c1a17</span>
+      </div>
+      <div class="color-chip">
+        <div class="chip-swatch" style="background:#c4603a;"></div>
+        <span class="chip-label">Accent</span>
+        <span class="chip-hex">#c4603a</span>
+      </div>
+      <div class="color-chip">
+        <div class="chip-swatch" style="background:#4a7c6f;"></div>
+        <span class="chip-label">Secondary</span>
+        <span class="chip-hex">#4a7c6f</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONTS -->
+  <section class="section">
+    <h2>Font Choices</h2>
+    <p>Two fonts imported from Google Fonts — a serif display and a clean humanist sans-serif.</p>
+
+    <div class="font-demo">
+      <h3>Display Font</h3>
+      <div class="sample" style="font-family:'Playfair Display',serif;">Playfair Display — Headlines &amp; Accents</div>
+      <p style="font-size:0.8rem;">Used for: h1–h3, logo name, large numbers. Adds editorial character and elegance.</p>
+    </div>
+
+    <div class="font-demo">
+      <h3>Body Font</h3>
+      <div class="sample" style="font-family:'DM Sans',sans-serif; font-size:1.3rem;">DM Sans — Body &amp; UI Text</div>
+      <p style="font-size:0.8rem;">Used for: paragraphs, nav links, labels, buttons. Clean and highly legible at small sizes.</p>
+    </div>
+  </section>
+
+  <!-- LOGO -->
+  <section class="section">
+    <h2>Logo Design</h2>
+    <p>A simple monogram mark — initials inside a circle — paired with name and subtitle text. Scales down to work in the footer and small contexts.</p>
+
+    <div style="display:flex; gap:1.5rem; align-items:center; margin-top:1rem; padding:1.5rem; background:var(--surface); border-radius:8px;">
+      <!-- Logo full -->
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div style="width:52px;height:52px;background:#c4603a;color:white;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:50%;">KR</div>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;">Kalob Rust</div>
+          <div style="font-size:0.75rem;color:var(--mid);letter-spacing:0.05em;">WDD 130 Portfolio</div>
+        </div>
+      </div>
+
+      <!-- Logo small -->
+      <div style="width:34px;height:34px;background:#c4603a;color:white;font-family:'Playfair Display',serif;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:50%;">KR</div>
+    </div>
+  </section>
+
+  <!-- WIREFRAME -->
+  <section class="section">
+    <h2>Wireframe</h2>
+    <p>A top-level layout showing the major sections and grid structure of the portal page.</p>
+
+    <div class="wireframe">
+      <!-- Header -->
+      <div class="wf-block dark">HEADER — Logo + Nav (sticky)</div>
+
+      <!-- Hero -->
+      <div class="wf-grid" style="grid-template-columns:1fr 1fr; margin-top:0.5rem;">
+        <div class="wf-block tall accent">HERO — Headline + CTA</div>
+        <div class="wf-block tall">HERO CARD — Skills</div>
+      </div>
+
+      <!-- Projects -->
+      <div class="wf-block" style="background:var(--surface);">SECTION HEADER — Projects</div>
+      <div class="wf-grid">
+        <div class="wf-block tall">Project Card 1</div>
+        <div class="wf-block tall accent">Project Card 2 (featured)</div>
+        <div class="wf-block tall">Project Card 3</div>
+      </div>
+
+      <!-- Table -->
+      <div class="wf-block" style="background:var(--surface);">TABLE — Course Schedule</div>
+      <div class="wf-block tall">Table rows × 5 (Week / Topic / Deliverable / Status)</div>
+
+      <!-- Form -->
+      <div class="wf-block" style="background:var(--surface);">FORM — Contact</div>
+      <div class="wf-block tall">Name | Email | Subject (select) | Message (textarea) | Submit</div>
+
+      <!-- Footer -->
+      <div class="wf-block dark">FOOTER — Logo + Footer Nav</div>
+    </div>
+  </section>
+
+  <!-- HTML ELEMENTS CHECKLIST -->
+  <section class="section">
+    <h2>Required HTML Elements</h2>
+    <p>Every required element and where it appears in the project.</p>
+
+    <div class="element-list">
+      <div class="el-item">
+        <code>&lt;h1&gt; – &lt;h6&gt;</code>
+        <small>Used throughout all pages for page, section, and card headings</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;p&gt;</code>
+        <small>Paragraph text in every section across all pages</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;a&gt;</code>
+        <small>Nav links, card links, footer links, ICE external links (target=_blank)</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;img&gt;</code>
+        <small>About page photo placeholder; ICE exercise screenshots</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;ul&gt; / &lt;li&gt;</code>
+        <small>Nav menus, skill-list in hero card, fact lists on about page</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;table&gt;</code>
+        <small>Course schedule table on index.html with thead, tbody, th, td</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;form&gt;</code>
+        <small>Contact form on index.html with input, select, textarea, button</small>
+      </div>
+      <div class="el-item">
+        <code>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;</code>
+        <small>Semantic landmark elements used on every page</small>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
