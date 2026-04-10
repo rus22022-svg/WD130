@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Report | WDD 130</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .report-wrap {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 4vw 6rem;
+      }
+
+      .report-wrap h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 0.4rem;
+      }
+
+      .report-meta {
+        font-size: 0.85rem;
+        color: var(--color-mid);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--color-accent);
+      }
+
+      .report-section {
+        margin-bottom: 3.5rem;
+      }
+
+      .report-section h2 {
+        font-size: 1.5rem;
+        color: var(--color-accent);
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-light);
+      }
+
+      .report-section p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .report-section a {
+        color: var(--color-accent);
+        font-weight: 500;
+      }
+
+      .site-link {
+        display: inline-block;
+        margin-top: 0.75rem;
+        padding: 0.5rem 1.25rem;
+        background: var(--color-surface);
+        border: 1px solid var(--color-light);
+        border-radius: var(--radius);
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--color-accent);
+      }
+
+      .site-link:hover {
+        background: var(--color-light);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="logo-wrap">
+        <img src="images/KR-LOGO.png" class="logo-mark" alt="Kalob Rust logo" />
+        <div class="logo-text">
+          <span class="logo-name">Kalob Rust</span>
+          <span class="logo-sub">WDD 130 Portfolio</span>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="wwr.html">WWR</a></li>
+          <li><a href="ice.html">ICE</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="report-wrap">
+        <h1>Client / Developer Team Project Report</h1>
+        <p class="report-meta">Kalob Rust &mdash; WDD 130 &mdash; 2025</p>
+
+        <!-- CLIENT REPORT -->
+        <div class="report-section">
+          <h2>Client Report</h2>
+
+          <p>
+            <strong
+              >How did you decide what content and images to use for your site
+              plan?</strong
+            >
+          </p>
+          <p>
+            I started by thinking about what I actually wanted the site to
+            communicate — my identity as a Cybersecurity student who is also
+            learning web development. I chose an editorial design style because
+            I wanted it to feel clean and professional rather than generic. For
+            content I leaned on things that were true to me: my background, my
+            interests, and the actual work I completed throughout the course.
+            Images were kept minimal and purposeful, using my own logo mark and
+            personal photo rather than stock imagery.
+          </p>
+
+          <p>
+            <strong
+              >How did you communicate with your developer? Was there any issues
+              with communication?</strong
+            >
+          </p>
+          <p>
+            I communicated with my developer primarily through Email and Canvas.
+            Both tools worked well enough for exchanging files and feedback,
+            though async communication always introduces some delay. There were
+            no major breakdowns, but more real-time communication would have
+            helped catch misalignments sooner.
+          </p>
+
+          <p>
+            <strong
+              >Did your developer meet your expectations for your site?</strong
+            >
+          </p>
+          <p>
+            Not fully. The site they built didn't follow my site plan very
+            closely and didn't match my design expectations as well as I had
+            hoped. That said, the end result was still a functional website and
+            overall a decent effort — just not quite what I had envisioned. It
+            reinforced how important clear, detailed communication and a
+            thorough site plan really are.
+          </p>
+
+          <p>
+            <strong
+              >What will you do differently next time you hire a team to do a
+              project for you?</strong
+            >
+          </p>
+          <p>
+            I would put significantly more detail into my site plan — more
+            specific wireframes, color hex codes clearly labeled, and annotated
+            notes on layout decisions. I would also follow up more frequently
+            over Email and Canvas rather than waiting for a finished product, so
+            I could catch deviations from the plan earlier in the process.
+          </p>
+
+          <a
+            class="site-link"
+            href="https://greengorilla774.github.io/wdd130-Rust/index.html"
+            target="_blank"
+            >View My Client Site &rarr;</a
+          >
+        </div>
+
+        <!-- LEAD DEVELOPER REPORT -->
+        <div class="report-section">
+          <h2>Lead Developer Report</h2>
+
+          <p>
+            <strong
+              >How did you manage your development team and communicate the
+              tasks for your junior devs?</strong
+            >
+          </p>
+          <p>
+            I communicated task assignments through Email and Canvas. I outlined
+            which pages each junior developer was responsible for and shared the
+            repository link so they could access the codebase. I tried to be
+            clear about what pages needed to be built and pointed them toward
+            the client's site plan for design guidance.
+          </p>
+
+          <p>
+            <strong
+              >How did you communicate with your client? Was there any
+              issues?</strong
+            >
+          </p>
+          <p>
+            All communication with the client was done through Email and Canvas.
+            There were no major issues — the client was responsive and I shared
+            the published site link with them so they could review progress.
+            Async communication worked reasonably well for this type of project.
+          </p>
+
+          <p>
+            <strong
+              >How did you handle publishing your client's site and sharing it
+              with the client?</strong
+            >
+          </p>
+          <p>
+            I published the site using GitHub Pages and shared the live URL with
+            the client through Email and Canvas so they could review it at any
+            time. This made it easy for the client to check progress without
+            needing to understand anything about Git or repositories.
+          </p>
+
+          <p>
+            <strong
+              >How was your experience with managing your site with
+              GitHub?</strong
+            >
+          </p>
+          <p>
+            Managing the repository was one of the more challenging aspects.
+            Setting up the repo, giving junior developers access, and keeping
+            everything organized took some trial and error. By the end of the
+            project I felt much more comfortable with GitHub as a collaboration
+            tool.
+          </p>
+
+          <a
+            class="site-link"
+            href="https://rus22022-svg.github.io/wdd130-jaredn/"
+            target="_blank"
+            >View Lead Dev Site &rarr;</a
+          >
+        </div>
+
+        <!-- JUNIOR DEVELOPER REPORT -->
+        <div class="report-section">
+          <h2>Junior Developer Report</h2>
+
+          <p>
+            <strong
+              >How did you communicate with your team lead? Was there any
+              issues?</strong
+            >
+          </p>
+          <p>
+            Communication varied significantly between teams. One team lead
+            never contacted me at all — I had no direction, no access details,
+            and no communication throughout the project. The other team went
+            smoothly, with clear instructions delivered through Email and Canvas
+            and enough guidance to complete my assigned page without issues.
+          </p>
+
+          <p>
+            <strong
+              >Did you know what was expected of you for each site?</strong
+            >
+          </p>
+          <p>
+            For the team where communication worked, yes — I had a clear
+            understanding of what page I was building and what design standards
+            to follow. For the team where the lead never reached out, I
+            genuinely did not know what was expected because there was no
+            communication to go off of. That was a frustrating experience and
+            highlighted how critical the lead developer role really is.
+          </p>
+
+          <p><strong>Were you able to contribute to your sites?</strong></p>
+          <p>
+            For the team with good communication, yes — I was able to complete
+            my assigned child page and contribute meaningfully to the project.
+            For the team where I never heard from the lead, my ability to
+            contribute was effectively blocked by the lack of contact and
+            access.
+          </p>
+
+          <p>
+            <strong
+              >Did you run into any issues with GitHub and adding your changes
+              to the sites?</strong
+            >
+          </p>
+          <p>
+            Nothing major on the technical side for the team where things ran
+            smoothly. The bigger issue was simply not having repository access
+            for the team where communication broke down entirely, which made
+            GitHub a non-issue by default since I could never get in to begin
+            with.
+          </p>
+
+          <a
+            class="site-link"
+            href="https://rus22022-svg.github.io/wdd130-jaredn/"
+            target="_blank"
+            >View Site 1 &rarr;</a
+          >
+        </div>
+
+        <!-- GENERAL REFLECTIONS -->
+        <div class="report-section">
+          <h2>General Experience and Reflections</h2>
+
+          <p>
+            <strong
+              >What was the most challenging part of this project for you? Were
+              you able to overcome it?</strong
+            >
+          </p>
+          <p>
+            The most challenging part was wearing three different hats — client,
+            lead developer, and junior developer — simultaneously. Switching
+            mindsets between "what do I want as a client" and "how do I build
+            this as a developer" took deliberate effort. I overcame it by
+            treating each role separately and giving each one focused attention
+            rather than trying to blur them together.
+          </p>
+
+          <p><strong>What did you enjoy most about this project?</strong></p>
+          <p>
+            Seeing my own portfolio come together as a real, published website
+            was genuinely rewarding. It is one thing to complete assignments; it
+            is another to have something online with your name on it that you
+            built from scratch. The collaborative aspect was also enjoyable —
+            seeing how other students approached the same design problems
+            differently was interesting and taught me things I would not have
+            learned working alone.
+          </p>
+
+          <p>
+            <strong
+              >What would you do differently if you could do the project
+              again?</strong
+            >
+          </p>
+          <p>
+            I would invest more time in the planning phase — more detailed
+            wireframes, a more thorough site plan, and earlier communication
+            with my developer. I would also start using Git branches properly
+            from day one rather than learning the hard way mid-project. Planning
+            and version control are things that feel like overhead until you
+            realize how much time they save.
+          </p>
+
+          <p>
+            <strong
+              >Do you feel more confident in working on real-world projects
+              after this experience? Explain.</strong
+            >
+          </p>
+          <p>
+            Yes, meaningfully so. Before this project, "working on a team" in a
+            development context was abstract to me. Now I have a concrete sense
+            of what that workflow looks like — how clients communicate with
+            developers, how lead developers manage a team and a repository, and
+            how junior developers contribute without breaking what already
+            exists. That hands-on experience, even at a small scale, translates
+            directly to how real development teams operate.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <img
+          src="images/KR-LOGO.png"
+          class="logo-mark small"
+          alt="Kalob Rust logo"
+        />
+        <p>&copy; 2025 Kalob Rust &mdash; WDD 130, BYU-Idaho</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="wwr.html">WWR</a>
+        <a href="ice.html">ICE</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </footer>
+  </body>
+</html>
